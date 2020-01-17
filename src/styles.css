@@ -1,3 +1,15 @@
 h1 {
     color:red;
 }
+
+.button {
+    background-color: whitesmoke;
+}
+
+.clicked {
+    background-color: lightslategray ;
+}
+
+.unclicked {
+    background-color: whitesmoke;
+}
