@@ -9,6 +9,7 @@ const buttons = document.querySelectorAll('.button') as NodeListOf<HTMLButtonEle
 let currentbutton = 1;
 buttons.forEach(bt => {
     // bt.className = 'unclicked';
+    
     bt.addEventListener('click', handleClick);
     currentbutton++;
 });
