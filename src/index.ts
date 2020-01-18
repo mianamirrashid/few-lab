@@ -38,15 +38,24 @@ function handleClick() {
 }
 function checkValue(inputstring: string): number {
     const x = parseFloat(inputstring);
-    if (isNaN(x) || x == null) { return 0; } else { return x; }
+    if (isNaN(x) || x == null || x < 0) {
+        billAmount.className = 'bad';
+        billAmount.value = '';
+        billAmount.focus();
+        return 0;
+    } else {
+        billAmount.className = 'good';
+        return x;
+    }
 }
 
 clickButtonAndUpdatefields(localStorage.getItem('selectedButtonId'));
 
-
-document.getElementById('billAmount').addEventListener('focusout', setDefaultButtonClick);
+billAmount.addEventListener('focusout', setDefaultButtonClick);
 
 function setDefaultButtonClick() {
+    checkValue(billAmount.value);
     clickButtonAndUpdatefields(localStorage.getItem('selectedButtonId'));
+    billAmount.focus();
 }
 

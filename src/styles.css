@@ -13,3 +13,13 @@ h1 {
 .unclicked {
     background-color: whitesmoke;
 }
+
+.good {
+    border-width: 1pt;
+    border-color: black;
+}
+
+.bad {
+    border-width: 2pt;
+    border-color: red;
+}
